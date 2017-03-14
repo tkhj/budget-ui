@@ -4,7 +4,7 @@
 
 angular
     .module('budget.ui')
-    .directive('dndTopNav', [
+    .directive('budgetTopNav', [
         function () {
             return {
                 restrict: 'E',

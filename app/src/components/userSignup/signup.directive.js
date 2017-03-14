@@ -4,7 +4,7 @@
 
 angular
     .module('budget.ui')
-    .directive('dndSignupForm', [
+    .directive('budgetSignupForm', [
         function () {
             return {
                 restrict: 'E',

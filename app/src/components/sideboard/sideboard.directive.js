@@ -4,7 +4,7 @@
 
 angular
     .module('budget.ui')
-    .directive('dndSideboard', [
+    .directive('budgetSideboard', [
         function () {
             return {
                 restrict: 'E',

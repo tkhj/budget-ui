@@ -4,7 +4,7 @@
 
 angular
     .module('budget.ui')
-    .directive('dndLoginForm', [
+    .directive('budgetLoginForm', [
         function () {
             return {
                 restrict: 'E',
