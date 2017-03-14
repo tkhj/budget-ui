@@ -59,7 +59,7 @@ function budgetOptionDropdownController($element, $scope, $log) {
      * selectOption - user has clicked to select an option
      */
     function toggleOptionList() {
-        $log.debug('dndOptionDropdownController::toggleOptionList():');
+        $log.debug('budgetOptionDropdownController::toggleOptionList():');
         $log.debug('vm.dropdownDisabled: ' + vm.dropdownDisabled);
 
         // Do not open if the dropdown is disabled
@@ -76,7 +76,7 @@ function budgetOptionDropdownController($element, $scope, $log) {
      * selectOption - user has clicked to select an option
      */
     function selectOption(option) {
-        $log.debug('dndOptionDropdownController::selectOption():');
+        $log.debug('budgetOptionDropdownController::selectOption():');
         $log.debug(option);
 
         // Assign the new option as selected
