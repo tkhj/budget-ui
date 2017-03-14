@@ -4,20 +4,20 @@
 
 angular
     .module('budget.ui')
-    .controller('dndOptionDropdownController', dndOptionDropdownController);
+    .controller('budgetOptionDropdownController', budgetOptionDropdownController);
 
 
-dndOptionDropdownController.$inject = [
+budgetOptionDropdownController.$inject = [
     '$element',
     '$scope',
     '$log'
 ];
 
 
-function dndOptionDropdownController($element, $scope, $log) {
+function budgetOptionDropdownController($element, $scope, $log) {
 
     var vm = this;
-    $log.debug('dndOptionDropdownController');
+    $log.debug('budgetOptionDropdownController');
 
 
     // Setup functions

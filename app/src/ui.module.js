@@ -36,34 +36,7 @@ angular.module('budget.ui', [
                     controllerAs: 'vm',
                     stateLabel: 'budget.TITLE'
                 })
-                .state('spells', {
-                    url: '/spells',
-                    templateUrl: 'views/spellList/spellListView.html',
-                    controller: 'spellListController',
-                    controllerAs: 'vm',
-                    stateLabel: 'budget.TITLE'
-                })
-                .state('spellbook', {
-                    url: '/spellbook',
-                    templateUrl: 'views/spellbook/5e/spellbookView.html',
-                    controller: 'spellbookController',
-                    controllerAs: 'vm',
-                    stateLabel: 'budget.TITLE'
-                })
-                .state('spellbook.create', {
-                    url: '/create',
-                    templateUrl: 'views/spellbook/5e/create/createSpellbookView.html',
-                    controller: 'createSpellbookController',
-                    controllerAs: 'vm',
-                    stateLabel: 'budget.TITLE'
-                })
-                .state('spellbook.view', {
-                    url: '/view?spellbookId',
-                    templateUrl: 'views/spellbook/5e/view/viewSpellbookView.html',
-                    controller: 'viewSpellbookController',
-                    controllerAs: 'vm',
-                    stateLabel: 'budget.TITLE'
-                });
+                ;
 
 
             // Configure translations

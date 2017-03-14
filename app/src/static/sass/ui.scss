@@ -17,12 +17,12 @@
 @import "patterns/budget-ui-forms";
 @import "patterns/budget-ui-buttons";
 @import "patterns/budget-ui-general-module";
-@import "patterns/budget-ui-option-dropdown";
 
 
 /*****************************************************************************
 **		Modules
 *****************************************************************************/
+@import "modules/budget-ui-option-dropdown";
 @import "modules/budget-ui-page-frame";
 @import "modules/budget-ui-top-nav";
 @import "modules/budget-ui-sideboard";

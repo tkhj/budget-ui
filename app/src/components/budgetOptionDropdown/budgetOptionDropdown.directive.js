@@ -4,7 +4,7 @@
 
 angular
     .module('budget.ui')
-    .directive('dndOptionDropdown', [
+    .directive('budgetOptionDropdown', [
         function () {
             return {
                 restrict: 'E',
@@ -16,8 +16,8 @@ angular
                     selectOptions: "=",
                     dropdownDisabled: "=?"
                 },
-                templateUrl: 'components/dndOptionDropdown/dndOptionDropdownView.html',
-                controller: 'dndOptionDropdownController',
+                templateUrl: 'components/budgetOptionDropdown/budgetOptionDropdownView.html',
+                controller: 'budgetOptionDropdownController',
                 controllerAs: 'vm'
             };
         }
