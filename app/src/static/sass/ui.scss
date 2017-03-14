@@ -1,7 +1,7 @@
 /*****************************************************************************
 **		Custom Mixins
 *****************************************************************************/
-@import "mixins/dnd-calc";
+@import "mixins/budget-calc";
 
 
 /*****************************************************************************
@@ -14,19 +14,19 @@
 /*****************************************************************************
 **		Patterns
 *****************************************************************************/
-@import "patterns/dnd-ui-forms";
-@import "patterns/dnd-ui-buttons";
-@import "patterns/dnd-ui-general-module";
-@import "patterns/dnd-ui-option-dropdown";
+@import "patterns/budget-ui-forms";
+@import "patterns/budget-ui-buttons";
+@import "patterns/budget-ui-general-module";
+@import "patterns/budget-ui-option-dropdown";
 
 
 /*****************************************************************************
 **		Modules
 *****************************************************************************/
-@import "modules/dnd-ui-page-frame";
-@import "modules/dnd-ui-top-nav";
-@import "modules/dnd-ui-sideboard";
-@import "modules/dnd-ui-login-module";
+@import "modules/budget-ui-page-frame";
+@import "modules/budget-ui-top-nav";
+@import "modules/budget-ui-sideboard";
+@import "modules/budget-ui-login-module";
 
 
 /*****************************************************************************
