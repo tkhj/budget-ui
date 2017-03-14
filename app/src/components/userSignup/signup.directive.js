@@ -3,7 +3,7 @@
  */
 
 angular
-    .module('dnd.ui')
+    .module('budget.ui')
     .directive('dndSignupForm', [
         function () {
             return {

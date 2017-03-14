@@ -6,7 +6,7 @@
     "use strict";
 
     angular
-        .module('dnd.ui')
+        .module('budget.ui')
         .controller('mainController', mainController);
 
 

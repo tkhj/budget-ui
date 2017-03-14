@@ -3,7 +3,7 @@
  */
 
 angular
-    .module('dnd.ui')
+    .module('budget.ui')
     .directive('dndOptionDropdown', [
         function () {
             return {

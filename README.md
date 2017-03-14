@@ -1,3 +1,3 @@
-# dndspells2
+# budget
 
-Front-end project for d&d spells
+Front-end project for budget

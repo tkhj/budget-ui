@@ -98,8 +98,8 @@ gulp.task('html', function() {
 
 gulp.task('sass', function() {
     return eventStream.merge(
-        compileSass(sourcePaths.sass, distPaths.distDir + '/static', 'dnd.css'),
-        compileSass(sourcePaths.sass, distPaths.distDir + '/static', 'dnd.min.css', true)
+        compileSass(sourcePaths.sass, distPaths.distDir + '/static', 'budget.css'),
+        compileSass(sourcePaths.sass, distPaths.distDir + '/static', 'budget.min.css', true)
     );
 });
 
@@ -115,7 +115,7 @@ gulp.task('js', function() {
         compileJsAndMaybeHtml(
             sourcePaths.js,
             distPaths.distDir,
-            'dnd-ui.js',
+            'budget-ui.js',
             false,
             true,
             ''
@@ -123,7 +123,7 @@ gulp.task('js', function() {
         compileJsAndMaybeHtml(
             sourcePaths.js,
             distPaths.distDir,
-            'dnd-ui.min.js',
+            'budget-ui.min.js',
             true, //I minify things!
             false,
             ''
@@ -210,7 +210,7 @@ function compileJsAndMaybeHtml(source, destination, concatName, minify, showErro
             spare: true
         })))
         .pipe(gulpif(/[.]html$/, html2js({
-            moduleName: 'dnd-ui',
+            moduleName: 'budget-ui',
             prefix: prefix
         })))
         .pipe(sourcemaps.init())

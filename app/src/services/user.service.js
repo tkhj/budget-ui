@@ -6,7 +6,7 @@
     "use strict";
 
     angular
-        .module('dnd.ui')
+        .module('budget.ui')
         .factory('UserService', UserService);
 
     UserService.$inject = ['$log', '$http'];

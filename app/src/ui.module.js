@@ -2,7 +2,7 @@
  * Created by brandonj on 10/6/15.
  */
 
-angular.module('dnd.ui', [
+angular.module('budget.ui', [
     'ui.router',
     'ngSanitize',
     'ngAnimate',
