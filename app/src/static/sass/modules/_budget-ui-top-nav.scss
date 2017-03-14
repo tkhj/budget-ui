@@ -6,7 +6,7 @@
 .top-nav-module {
     background: $brand-primary;
     border-bottom: 1px solid $teal-darken-10;
-    height: dnd-calc(40, 16, em);
+    height: budget-calc(40, 16, em);
     left: 0;
     position: fixed;
     right: 0;
@@ -17,7 +17,7 @@
         color: $teal-darken-20;
         cursor: pointer;
         display: inline-block;
-        padding: dnd-calc(10, 16, em);
+        padding: budget-calc(10, 16, em);
         transition: all .15s ease-in-out;
         vertical-align: top;
 
@@ -36,7 +36,7 @@
         cursor: pointer;
         display: inline-block;
         height: 100%;
-        padding: 0 dnd-calc(10, 16, em);
+        padding: 0 budget-calc(10, 16, em);
         transition: all .15s ease-in-out;
         vertical-align: top;
 

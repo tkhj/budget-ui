@@ -3,7 +3,7 @@
 **		Calc mixin - helps calculate values in perfecnt (%) or ems
 **
 *****************************************************************************/
-@mixin dnd-calc($property, $target, $context, $measurement: false) {
+@mixin budget-calc($property, $target, $context, $measurement: false) {
 
     @if $measurement == "em" {
         #{$property}: ($target / $context) * 1em;
@@ -20,7 +20,7 @@
 **		Calc function - calculate and return a target / context number
 **
 *****************************************************************************/
-@function dnd-calc($target, $context, $measurement: false) {
+@function budget-calc($target, $context, $measurement: false) {
 
     @if $measurement == "em" {
         @return ($target / $context) * 1em;

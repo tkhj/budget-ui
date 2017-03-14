@@ -7,15 +7,15 @@
     position: relative;
 
     .mod-header {
-        padding: dnd-calc(20, 16, em) dnd-calc(20, 16, em) dnd-calc(10, 16, em) dnd-calc(20, 16, em);
+        padding: budget-calc(20, 16, em) budget-calc(20, 16, em) budget-calc(10, 16, em) budget-calc(20, 16, em);
     }
 
     .mod-body {
-        padding: dnd-calc(10, 16, em) dnd-calc(20, 16, em);
+        padding: budget-calc(10, 16, em) budget-calc(20, 16, em);
     }
 
     .limited-container {
         margin: 0 auto;
-        max-width: dnd-calc(400, 16, em);
+        max-width: budget-calc(400, 16, em);
     }
 }

@@ -25,7 +25,7 @@
         background: $gray-80;
         border: 1px solid $teal-darken-20;
         cursor: pointer;
-        padding: dnd-calc(6, 16, em) dnd-calc(40, 16, em) dnd-calc(6, 16, em) dnd-calc(10, 16, em);
+        padding: budget-calc(6, 16, em) budget-calc(40, 16, em) budget-calc(6, 16, em) budget-calc(10, 16, em);
         position: relative;
 
         &:hover {
@@ -51,7 +51,7 @@
         right: 0;
         transition: all .15s ease-in-out;
         top: 0;
-        width: dnd-calc(34, 16, em);
+        width: budget-calc(34, 16, em);
 
         &:after, &:before {
             border: 5px solid $teal-darken-10;
@@ -61,7 +61,7 @@
             display: block;
             height: 0;
             position: absolute;
-            right: dnd-calc(12, 16, em);
+            right: budget-calc(12, 16, em);
             transition: all .15s ease-in-out;
             width: 0;
         }
@@ -69,12 +69,12 @@
         &:after {
             border-top-color: transparent;
             display: none;
-            top: dnd-calc(9, 16, em);
+            top: budget-calc(9, 16, em);
         }
 
         &:before {
             border-bottom-color: transparent;
-            top: dnd-calc(14, 16, em);
+            top: budget-calc(14, 16, em);
         }
     }
 
@@ -113,7 +113,7 @@
 
         .text-container {
             border-left: 4px solid transparent;
-            padding: dnd-calc(8, 16, em) dnd-calc(10, 16, em) dnd-calc(8, 16, em) dnd-calc(20, 16, em);
+            padding: budget-calc(8, 16, em) budget-calc(10, 16, em) budget-calc(8, 16, em) budget-calc(20, 16, em);
         }
 
         &.selected {
@@ -202,23 +202,23 @@
 .form-large {
 
     .selected-option {
-        font-size: dnd-calc(18, 16, em);
-        padding: dnd-calc(10, 18, em) dnd-calc(48, 18, em) dnd-calc(10, 18, em) dnd-calc(12, 18, em);
+        font-size: budget-calc(18, 16, em);
+        padding: budget-calc(10, 18, em) budget-calc(48, 18, em) budget-calc(10, 18, em) budget-calc(12, 18, em);
     }
 
     .option-toggle {
-        width: dnd-calc(42, 18, em);
+        width: budget-calc(42, 18, em);
 
         &:after, &:before {
-            right: dnd-calc(15, 18, em);
+            right: budget-calc(15, 18, em);
         }
 
         &:after {
-            top: dnd-calc(13, 18, em);
+            top: budget-calc(13, 18, em);
         }
 
         &:before {
-            top: dnd-calc(18, 18, em);
+            top: budget-calc(18, 18, em);
         }
     }
 }

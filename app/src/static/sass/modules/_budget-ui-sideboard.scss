@@ -7,17 +7,17 @@
     background: $gray-80;
     bottom: 0;
     box-shadow: 0 0 20px rgba($black, .25);
-    left: dnd-calc(-($sideboard-padding-small + 10), 100, %);
-    padding-top: dnd-calc(40, 16, em);
+    left: budget-calc(-($sideboard-padding-small + 10), 100, %);
+    padding-top: budget-calc(40, 16, em);
     position: fixed;
     top: 0;
     transition: left .15s ease-in-out;
-    width: dnd-calc($sideboard-padding-small, 100, %);
+    width: budget-calc($sideboard-padding-small, 100, %);
     z-index: 500;
 
     @media screen and ( min-width: 640px ) {
-        left: dnd-calc(-($sideboard-padding-medium + 10), 16, em);
-        width: dnd-calc($sideboard-padding-medium, 16, em);
+        left: budget-calc(-($sideboard-padding-medium + 10), 16, em);
+        width: budget-calc($sideboard-padding-medium, 16, em);
     }
 
     &.active {
@@ -32,8 +32,8 @@
         background: $teal-darken-20;
         border-top: 1px solid $gray-90;
         border-bottom: 1px solid $gray-90;
-        padding-top: dnd-calc(10, 16, em);
-        padding-left: dnd-calc(24, 16, em);
+        padding-top: budget-calc(10, 16, em);
+        padding-left: budget-calc(24, 16, em);
     }
 
     h4 {
@@ -51,8 +51,8 @@
     .sidebar-nav-item {
         border-left: 4px solid transparent;
         cursor: pointer;
-        font-size: dnd-calc(14, 16, em);
-        padding-left: dnd-calc(20, 14, em);
+        font-size: budget-calc(14, 16, em);
+        padding-left: budget-calc(20, 14, em);
         transition: all .15s ease-in-out;
 
         span {
@@ -60,7 +60,7 @@
             color: $white;
             display: block;
             font-weight: bold;
-            padding: dnd-calc(16, 14, em) dnd-calc(20, 14, em) dnd-calc(16, 14, em) 0;
+            padding: budget-calc(16, 14, em) budget-calc(20, 14, em) budget-calc(16, 14, em) 0;
             transition: all .15s ease-in-out;
         }
 

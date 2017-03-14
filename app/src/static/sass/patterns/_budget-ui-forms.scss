@@ -6,7 +6,7 @@
 form {
 
     > ul > li {
-        padding-bottom: dnd-calc(10, 16, em);
+        padding-bottom: budget-calc(10, 16, em);
 
         &:last-child {
             padding: 0;
@@ -14,12 +14,12 @@ form {
     }
 
     .form-errors {
-        padding: dnd-calc(10, 16, em) 0;
+        padding: budget-calc(10, 16, em) 0;
     }
 
     .error {
         color: $error;
-        font-size: dnd-calc(12, 16, em);
+        font-size: budget-calc(12, 16, em);
         font-weight: bold;
     }
 }
@@ -27,9 +27,9 @@ form {
 .input-label {
     color: $teal-darken-10;
     display: block;
-    font-size: dnd-calc(12, 16, em);
+    font-size: budget-calc(12, 16, em);
     font-weight: bold;
-    padding-bottom: dnd-calc(6, 12, em);
+    padding-bottom: budget-calc(6, 12, em);
 }
 
 input[type="text"], input[type="password"], input[type="email"] {
@@ -38,7 +38,7 @@ input[type="text"], input[type="password"], input[type="email"] {
     color: $white;
     display: block;
     line-height: 1.25;
-    padding: dnd-calc(6, 16, em) dnd-calc(10, 16, em);
+    padding: budget-calc(6, 16, em) budget-calc(10, 16, em);
     width: 100%;
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -63,7 +63,7 @@ input[type="text"], input[type="password"], input[type="email"] {
 input[type="button"] {
     display: block;
     line-height: 1.25;
-    padding: dnd-calc(6, 16, em) dnd-calc(10, 16, em);
+    padding: budget-calc(6, 16, em) budget-calc(10, 16, em);
     width: 100%;
 }
 
@@ -71,7 +71,7 @@ input[type="button"] {
 .form-large {
 
     input[type="text"], input[type="password"], input[type="email"], input[type="button"] {
-        font-size: dnd-calc(18, 16, em);
-        padding: dnd-calc(10, 18, em) dnd-calc(12, 18, em);
+        font-size: budget-calc(18, 16, em);
+        padding: budget-calc(10, 18, em) budget-calc(12, 18, em);
     }
 }

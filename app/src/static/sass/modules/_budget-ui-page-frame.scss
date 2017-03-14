@@ -4,15 +4,15 @@
 **
 *****************************************************************************/
 .page-frame {
-    padding-top: dnd-calc(40, 16, em);
+    padding-top: budget-calc(40, 16, em);
     position: relative;
     transition: padding-left .15s ease-in-out;
 
     &.active {
-        padding-left: dnd-calc($sideboard-padding-small, 100, %);
+        padding-left: budget-calc($sideboard-padding-small, 100, %);
 
         @media screen and ( min-width: 640px ) {
-            padding-left: dnd-calc($sideboard-padding-medium, 16, em);
+            padding-left: budget-calc($sideboard-padding-medium, 16, em);
         }
     }
 }
