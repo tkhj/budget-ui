@@ -1,0 +1,81 @@
+/*****************************************************************************
+**
+**		Core
+**
+*****************************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; // 16px
+}
+
+body {
+    background: $gray-90;
+    font-size: 1em; // Set application base font-size to 16px
+    line-height: dnd-calc(20, 16); // Set base line-height to 20px
+}
+
+/*****************************************************************************
+**		Typography
+*****************************************************************************/
+h1, h2, h3, h4, h5, h6, p {
+    color: $white;
+}
+
+h2 {
+    font-size: dnd-calc(24, 16, em);
+    margin: 0 0 dnd-calc(18, 24, em) 0;
+}
+
+h3 {
+    font-size: dnd-calc(20, 16, em);
+    margin: 0 0 dnd-calc(16, 20, em) 0;
+}
+
+h4 {
+    font-size: dnd-calc(18, 16, em);
+    margin: 0 0 dnd-calc(14, 18, em) 0;
+}
+
+h5 {
+    font-size: dnd-calc(16, 16, em);
+    margin: 0 0 dnd-calc(12, 16, em) 0;
+}
+
+h6 {
+    font-size: dnd-calc(14, 16, em);
+    margin: 0 0 dnd-calc(10, 14, em) 0;
+}
+
+p {
+    margin: 0 0 dnd-calc(10, 16, em) 0;
+}
+
+
+h2, h3, h4, h5, h6, p {
+    font-weight: normal;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+
+/*****************************************************************************
+**		Lists
+*****************************************************************************/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*****************************************************************************
+**		Other
+*****************************************************************************/
+.centered {
+    text-align: center;
+}

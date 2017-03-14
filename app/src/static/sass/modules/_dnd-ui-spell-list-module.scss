@@ -1,0 +1,221 @@
+/*****************************************************************************
+**
+**		Spell List Module
+**
+*****************************************************************************/
+.spell-list-module {
+
+    .mod-body {
+
+    }
+
+
+    /*
+     * Filters section
+     */
+    .spell-list-filters {
+        padding-bottom: dnd-calc(20, 16, em);
+
+        .spell-list-filter {
+            display: inline-block;
+            padding: 0 dnd-calc(10, 16, em);
+            vertical-align: top;
+            width: dnd-calc(2, 6, %);
+        }
+
+        .level-filter {
+            padding-left: 0;
+        }
+
+        .class-filter {
+            padding-right: 0;
+        }
+    }
+
+    .spell-list-col {
+        display: inline-block;
+        padding: dnd-calc(6, 16, em) dnd-calc(10, 16, em);
+        vertical-align: top;
+    }
+
+    .name-col {
+        width: dnd-calc(2, 5, %);
+    }
+
+    .school-col {
+        width: dnd-calc(2, 5, %);
+    }
+
+    .level-col {
+        padding-right: dnd-calc(30, 16, em);
+        width: dnd-calc(1, 5, %);
+    }
+
+
+    /*
+     * Header styles
+     */
+    .spell-list-header {
+        border-top: 1px solid $teal-darken-20;
+        border-bottom: 1px solid $teal-darken-20;
+
+        .spell-list-col {
+            background: $brand-primary;
+            cursor: pointer;
+            border-left: 1px solid $gray-90;
+            padding-right: dnd-calc(30, 16, em);
+            position: relative;
+
+            &:first-child {
+                border-left: none;
+            }
+
+            &:after, &:before {
+                border: 5px solid $teal-darken-10;
+                border-right-color: transparent;
+                border-left-color: transparent;
+                content: '';
+                display: block;
+                height: 0;
+                position: absolute;
+                right: dnd-calc(10, 16, em);
+                width: 0;
+            }
+
+            &:after {
+                border-top-color: transparent;
+                top: dnd-calc(4, 16, em);
+            }
+
+            &:before {
+                border-bottom-color: transparent;
+                bottom: dnd-calc(4, 16, em);
+            }
+
+            &.activeUp {
+
+                &:after {
+                    border-bottom-color: $teal-darken-20;
+                }
+            }
+
+            &.activeDown {
+
+                &:before {
+                    border-top-color: $teal-darken-20;
+                }
+            }
+        }
+    }
+
+
+    /*
+     * Spell Row Styles
+     */
+    .spell-list-row {
+        background: $gray-50;
+        border-bottom: 1px solid $gray-90;
+        transition: all .15s ease-in-out;
+
+        &:nth-child(odd) {
+            background: $gray-70;
+        }
+
+        .school-col, .level-col {
+            border-left: 1px solid $gray-90;
+        }
+
+        .ritual {
+            font-size: dnd-calc(13, 16, em);
+        }
+
+        .toggle-spell-selected {
+            cursor: pointer;
+            height: 100%;
+            line-height: dnd-calc(30, 16, em);
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 0;
+            transition: all .15s ease-in-out;
+            width: dnd-calc(30, 16, em);
+
+            &:hover {
+                background: $brand-primary;
+            }
+
+            p {
+                transition: all .15s ease-in-out;
+            }
+
+            &.selected {
+
+                p {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    .spell-list-row-cols {
+        cursor: pointer;
+        position: relative;
+    }
+
+    .spell-details {
+        border-top: 1px solid $gray-90;
+        padding: dnd-calc(12, 16, em) dnd-calc(10, 16, em);
+        transition: all .15s ease-in-out;
+
+        .label {
+            font-weight: bold;
+        }
+
+        p {
+            color: $offwhite;
+            font-size: dnd-calc(13, 16, em);
+        }
+
+        .spell-higher-levels {
+            padding-top: dnd-calc(10, 16, em);
+        }
+    }
+
+
+    // Selected spell row
+    .spell-list-row.selected {
+
+        .spell-list-row-cols {
+            background: $teal-darken-10;
+        }
+    }
+
+
+    /*
+     * Create Mode & Edit Mode
+     */
+    &.createMode, &.editMode {
+
+        .spell-list-filters {
+
+            .spell-list-filter {
+                width: dnd-calc(1, 2, %);
+            }
+
+            .school-filter {
+                padding-right: 0;
+            }
+        }
+    }
+
+
+    /*
+     * Disabled spell list
+     */
+    &.disabled {
+
+        .spell-list-row p {
+            color: $gray-30;
+        }
+    }
+}

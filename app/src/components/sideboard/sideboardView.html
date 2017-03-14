@@ -1,0 +1,42 @@
+<div class="sideboard general-module" ng-class="{'active': vm.isSideboardOpen}">
+    <div class="mod-header-wrapper">
+        <div class="mod-header">
+            <h4 translate="dndspells.SIDEBOARD.VIEW.HEADER"></h4>
+        </div>
+    </div>
+    <div class="mod-body-wrapper">
+        <div class="mod-body">
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'home'}"
+                    ng-if="!vm.userData.loggedin" ng-click="vm.navigate('home')">
+                    <span translate="dndspells.SIDEBOARD.VIEW.HOME"></span>
+                </li>
+                <li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'dashboard'}"
+                    ng-if="vm.userData.loggedin" ng-click="vm.navigate('dashboard')">
+                    <span translate="dndspells.SIDEBOARD.VIEW.DASHBOARD"></span>
+                </li>
+                <li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'spells'}" ng-click="vm.navigate('spells')">
+                    <span translate="dndspells.SIDEBOARD.VIEW.SPELL_LIST"></span>
+                </li>
+                <li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'spellbook.view'}" ng-click="vm.navigate('spellbook.view')">
+                    <span translate="dndspells.SIDEBOARD.VIEW.SPELLBOOKS"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mod-header-wrapper">
+        <div class="mod-header">
+            <h4 translate="dndspells.SIDEBOARD.CREATE.HEADER"></h4>
+        </div>
+    </div>
+    <div class="mod-body-wrapper">
+        <div class="mod-body">
+            <ul class="sidebar-nav">
+                <li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'spellbook.create'}"
+                    ng-click="vm.navigate('spellbook.create')">
+                    <span translate="dndspells.SIDEBOARD.CREATE.SPELLBOOK"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

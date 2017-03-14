@@ -1,0 +1,69 @@
+/*****************************************************************************
+**
+**		Top Nav Module
+**
+*****************************************************************************/
+.top-nav-module {
+    background: $brand-primary;
+    border-bottom: 1px solid $teal-darken-10;
+    height: dnd-calc(40, 16, em);
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+
+    .side-nav-toggle {
+        color: $teal-darken-20;
+        cursor: pointer;
+        display: inline-block;
+        padding: dnd-calc(10, 16, em);
+        transition: all .15s ease-in-out;
+        vertical-align: top;
+
+        &.active {
+            background: $teal-darken-20;
+            color: $white;
+        }
+
+        &:hover {
+            background: $teal-darken-10;
+            color: $white;
+        }
+    }
+
+    .page-title {
+        cursor: pointer;
+        display: inline-block;
+        height: 100%;
+        padding: 0 dnd-calc(10, 16, em);
+        transition: all .15s ease-in-out;
+        vertical-align: top;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+        span {
+            color: $white;
+            display: inline-block;
+            text-decoration: none;
+            text-shadow: 0 -1px 0 $teal-darken-10;
+            vertical-align: middle;
+        }
+
+
+        &:active {
+            background: $teal-darken-20;
+            color: $white;
+        }
+
+        &:hover {
+            background: $teal-darken-10;
+            color: $white;
+        }
+    }
+}

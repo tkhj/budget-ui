@@ -1,0 +1,224 @@
+/*****************************************************************************
+**
+**		Option Dropdown
+**
+*****************************************************************************/
+.dnd-option-dropdown {
+    position: relative;
+
+    /*
+     * Display mode types (block/inline-block)
+     */
+    &.option-block {
+        display: block;
+    }
+
+    &.option-inline-block {
+        display: inline-block;
+    }
+
+
+    /*
+     * The selected option
+     */
+    .selected-option {
+        background: $gray-80;
+        border: 1px solid $teal-darken-20;
+        cursor: pointer;
+        padding: dnd-calc(6, 16, em) dnd-calc(40, 16, em) dnd-calc(6, 16, em) dnd-calc(10, 16, em);
+        position: relative;
+
+        &:hover {
+
+            .option-toggle {
+
+                &:before {
+                    border-top-color: $teal-darken-20;
+                }
+            }
+        }
+    }
+
+    .selected-option-text {
+        color: $white;
+    }
+
+    .option-toggle {
+        background: $brand-primary;
+        border-left: 1px solid $teal-darken-20;
+        bottom: 0;
+        position: absolute;
+        right: 0;
+        transition: all .15s ease-in-out;
+        top: 0;
+        width: dnd-calc(34, 16, em);
+
+        &:after, &:before {
+            border: 5px solid $teal-darken-10;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            content: '';
+            display: block;
+            height: 0;
+            position: absolute;
+            right: dnd-calc(12, 16, em);
+            transition: all .15s ease-in-out;
+            width: 0;
+        }
+
+        &:after {
+            border-top-color: transparent;
+            display: none;
+            top: dnd-calc(9, 16, em);
+        }
+
+        &:before {
+            border-bottom-color: transparent;
+            top: dnd-calc(14, 16, em);
+        }
+    }
+
+    /*
+     * The list of options
+     */
+    .option-list {
+        border-top: 1px solid $gray-100;
+        border-right: 1px solid $gray-100;
+        border-left: 1px solid $gray-100;
+        display: none;
+        left: 0;
+        position: absolute;
+        top: calc(100% - 1px);
+        width: 100%;
+        z-index: 100;
+    }
+
+    .option-list-item {
+        background: $gray-80;
+        border-bottom: 1px solid $gray-100;
+        cursor: pointer;
+        transition: all .15s ease-in-out;
+
+        .option-text {
+            transition: all .15s ease-in-out;
+        }
+
+        &:hover {
+            background: $gray-90;
+
+            .option-text {
+                color: $brand-primary;
+            }
+        }
+
+        .text-container {
+            border-left: 4px solid transparent;
+            padding: dnd-calc(8, 16, em) dnd-calc(10, 16, em) dnd-calc(8, 16, em) dnd-calc(20, 16, em);
+        }
+
+        &.selected {
+
+            .text-container {
+                background: $gray-90;
+                border-left-color: $brand-primary;
+                cursor: auto;
+            }
+
+            .option-text {
+                color: $brand-primary;
+                font-weight: bold;
+            }
+        }
+    }
+
+
+    /*
+     * The option dropdown is open
+     */
+    &.active {
+
+        .option-toggle {
+            background: $teal-darken-10;
+
+            &:after {
+                border-bottom-color: $white;
+                display: block;
+            }
+
+            &:before {
+                display: none;
+            }
+        }
+
+        .option-list {
+            display: block;
+        }
+    }
+
+
+    /*
+     * The option dropdown is disabled
+     */
+    &.disabled {
+
+        .selected-option {
+            border-color: $gray-100;
+
+            &:hover {
+
+                .option-toggle:before {
+                    border-top-color: $gray-darken-20;
+                }
+            }
+        }
+
+        .selected-option-text {
+            color: $gray-90;
+        }
+
+        .option-toggle {
+            background: $gray-100;
+            border-left-color: $gray-100;
+
+            &:before {
+                border-top-color: $gray-90;
+            }
+        }
+
+        .selected-option {
+            cursor: default;
+        }
+
+        .selected-option:hover {
+
+            .option-toggle:before {
+                border-top-color: $gray-90;
+            }
+        }
+    }
+}
+
+
+.form-large {
+
+    .selected-option {
+        font-size: dnd-calc(18, 16, em);
+        padding: dnd-calc(10, 18, em) dnd-calc(48, 18, em) dnd-calc(10, 18, em) dnd-calc(12, 18, em);
+    }
+
+    .option-toggle {
+        width: dnd-calc(42, 18, em);
+
+        &:after, &:before {
+            right: dnd-calc(15, 18, em);
+        }
+
+        &:after {
+            top: dnd-calc(13, 18, em);
+        }
+
+        &:before {
+            top: dnd-calc(18, 18, em);
+        }
+    }
+}
