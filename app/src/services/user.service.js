@@ -34,7 +34,7 @@
         function checkLoggedIn() {
 
             return $http({
-                url: 'http://localhost/personal/budget-api/api.php/api/user/currentUser',
+                url: '/api.php/api/user/currentUser', // http://localhost/personal/budget-api/api.php/api/user/currentUser
                 method: 'GET',
                 withCredentials: true,
                 headers: {
@@ -75,7 +75,7 @@
             };
 
             return $http({
-                url: 'http://localhost/personal/budget-api/api.php/api/user/signup',
+                url: '/api.php/api/user/signup', // http://localhost/personal/budget-api/api.php/api/user/signup
                 method: 'POST',
                 data: postData,
                 withCredentials: true,
@@ -98,7 +98,7 @@
             };
 
             return $http({
-                url: 'http://localhost/personal/budget-api/api.php/api/user/login',
+                url: '/api.php/api/user/login', // http://localhost/personal/budget-api/api.php/api/user/login
                 method: 'POST',
                 data: postData,
                 withCredentials: true,
@@ -115,7 +115,7 @@
         function logoutUser() {
 
             return $http({
-                url: 'http://localhost/personal/budget-api/api.php/api/user/logout',
+                url: '/api.php/api/user/logout', // http://localhost/personal/budget-api/api.php/api/user/logout
                 method: 'POST',
                 data: currUserData,
                 withCredentials: true,

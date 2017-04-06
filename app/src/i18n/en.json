@@ -1,25 +1,22 @@
 {
     "budget": {
-        "TITLE": "DnD Spells",
+        "TITLE": "OurIncome",
         "GENERAL": {
             "NAME": "Name",
             "EMAIL": "Email",
             "PASSWORD": "Password"
         },
         "TOP_NAV": {
-            "HEADER": "DnD Spells"
+            "HEADER": "OurIncome"
         },
         "SIDEBOARD": {
             "VIEW": {
                 "HEADER": "View",
                 "HOME": "Home",
-                "DASHBOARD": "Dashboard",
-                "SPELL_LIST": "Spell List",
-                "SPELLBOOKS": "Spellbooks"
+                "DASHBOARD": "Dashboard"
             },
             "CREATE": {
-                "HEADER": "Create",
-                "SPELLBOOK": "Spellbook"
+                "HEADER": "Create"
             }
         },
         "HOME": {
@@ -41,60 +38,6 @@
             "ERROR_PASSWORD_REQUIRED": "Password is required.",
             "LOGIN": "Login",
             "ERROR_LOGIN_ERROR": "Your email or password is incorrect."
-        },
-        "CLASS_LIST": {
-            "BARBARIAN": "Barbarian",
-            "BARD": "Bard",
-            "CLERIC": "Cleric",
-            "DRUID": "Druid",
-            "FIGHTER": "Fighter",
-            "MONK": "Monk",
-            "PALADIN": "Paladin",
-            "RANGER": "Ranger",
-            "ROGUE": "Rogue",
-            "SORCERER": "Sorcerer",
-            "WARLOCK": "Warlock",
-            "WIZARD": "Wizard"
-        },
-        "SPELL_LIST": {
-            "HEADER": "Spell List",
-            "LEVEL_FILTER_LABEL": "Level:",
-            "SCHOOL_FILTER_LABEL": "School:",
-            "CLASS_FILTER_LABEL": "Class:",
-            "SPELL_NAME": "Spell Name",
-            "SPELL_LEVEL": "Level",
-            "SPELL_SCHOOL": "School",
-            "ALL": "All",
-            "CANTRIP": "Cantrip",
-            "SCHOOL_ABJURATION": "Abjuration",
-            "SCHOOL_CONJURATION": "Conjuration",
-            "SCHOOL_DIVINATION": "Divination",
-            "SCHOOL_ENCHANTMENT": "Enchantment",
-            "SCHOOL_EVOCATION": "Evocation",
-            "SCHOOL_ILLUSION": "Illusion",
-            "SCHOOL_NECROMANCY": "Necromancy",
-            "SCHOOL_TRANSMUTATION": "Transmutation",
-            "RITUAL": "(ritual)",
-            "CASTING_TIME_LABEL": "Casting time: ",
-            "RANGE_LABEL": "Range: ",
-            "COMPONENTS_LABEL": "Components: ",
-            "VERBAL": "V",
-            "SOMATIC": "S",
-            "MATERIAL": "M ({{material}})",
-            "DURATION": "Duration: ",
-            "CONCENTRATION": "Concentration, up to {{duration}}",
-            "HIGHER_LEVELS": "At Higher Levels: ",
-            "SOURCE_PHB": "Player's Handbook",
-            "SOURCE_MM": "Monster Manual",
-            "SOURCE_DMG": "Dungeon Master's Guide",
-            "SOURCE_UNKNOWN": "Unknown"
-        },
-        "CREATE_SPELLBOOK": {
-            "HEADER": "Create Spellbook",
-            "CHAR_NAME_LABEL": "Character Name:",
-            "CHAR_NAME_PLACEHOLDER": "Character Name",
-            "ERROR_CHAR_NAME_REQUIRED": "A name is required.",
-            "SAVE_BUTTON": "Create Spellbook"
         },
         "DASHBOARD": {
             "HEADER": "Dashboard"

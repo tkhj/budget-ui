@@ -16,7 +16,7 @@ angular
                     selectOptions: "=",
                     dropdownDisabled: "=?"
                 },
-                templateUrl: 'components/budgetOptionDropdown/budgetOptionDropdownView.html',
+                templateUrl: 'components/optionDropdown/optionDropdownView.html',
                 controller: 'budgetOptionDropdownController',
                 controllerAs: 'vm'
             };
