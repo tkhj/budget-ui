@@ -44,8 +44,7 @@ function loginController($scope, $log, $state, UserService) {
                 if (response.data.loggedin) {
 
                     UserService.setUserData(response.data);
-                    //$state.go('dashboard', {}, {reload: true});
-					window.location = "http://localhost:8080/dashboard";
+                    $state.go('dashboard', {}, {reload: true});
 
                 } else {
 
