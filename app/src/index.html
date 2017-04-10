@@ -10,6 +10,7 @@
         <div class="page-frame" ng-class="{'active': vm.isSideboardOpen}">
             <budget-top-nav></budget-top-nav>
             <budget-sideboard></budget-sideboard>
+			<div class="loading-mask" ng-if="vm.isUserLoading"></div>
             <div ui-view="" class="content-frame"></div>
         </div>
 

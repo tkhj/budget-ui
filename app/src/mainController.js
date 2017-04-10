@@ -29,6 +29,7 @@
 
         // Setup variables
         vm.isSideboardOpen = false;
+		vm.isUserLoading = true;
 
 
         /*
@@ -37,6 +38,14 @@
         $rootScope.$on('sideboardToggle', function() {
             vm.isSideboardOpen = !vm.isSideboardOpen;
         });
+
+
+		/*
+		 * the run block has retrieved initial user data
+		 */
+		$rootScope.$on('UserDataLoaded', function() {
+			vm.isUserLoading = false;
+		});
 
     }
 })();
