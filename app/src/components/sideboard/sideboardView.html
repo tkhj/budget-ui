@@ -1,36 +1,42 @@
 <div class="sideboard general-module" ng-class="{'active': vm.isSideboardOpen}">
-    <div class="mod-header-wrapper">
-        <div class="mod-header">
-            <h4 translate="budget.SIDEBOARD.VIEW.HEADER"></h4>
-        </div>
-    </div>
-    <div class="mod-body-wrapper">
-        <div class="mod-body">
-            <ul class="sidebar-nav">
-                <li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'home'}"
-                    ng-if="!vm.userData.loggedin" ng-click="vm.navigate('home')">
-                    <span translate="budget.SIDEBOARD.VIEW.HOME"></span>
-                </li>
-                <li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'dashboard'}"
-                    ng-if="vm.userData.loggedin" ng-click="vm.navigate('dashboard')">
-                    <span translate="budget.SIDEBOARD.VIEW.DASHBOARD"></span>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!--<div class="mod-header-wrapper">
-        <div class="mod-header">
-            <h4 translate="budget.SIDEBOARD.CREATE.HEADER"></h4>
-        </div>
-    </div>
-    <div class="mod-body-wrapper">
-        <div class="mod-body">
-            <ul class="sidebar-nav">
-                <li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'spellbook.create'}"
-                    ng-click="vm.navigate('spellbook.create')">
-                    <span translate="budget.SIDEBOARD.CREATE.SPELLBOOK"></span>
-                </li>
-            </ul>
-        </div>
-    </div>-->
+
+	<section>
+		<div class="mod-header-wrapper">
+			<div class="mod-header">
+				<h4 translate="budget.SIDEBOARD.VIEW.HEADER"></h4>
+			</div>
+		</div>
+		<div class="mod-body-wrapper">
+			<div class="mod-body">
+				<ul class="sidebar-nav">
+					<li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'home'}"
+						ng-if="!vm.userData.loggedin" ng-click="vm.navigate('home')">
+						<span translate="budget.SIDEBOARD.VIEW.HOME"></span>
+					</li>
+					<li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'dashboard'}"
+						ng-if="vm.userData.loggedin" ng-click="vm.navigate('dashboard')">
+						<span translate="budget.SIDEBOARD.VIEW.DASHBOARD"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section ng-if="vm.userData.loggedin">
+		<div class="mod-header-wrapper">
+			<div class="mod-header">
+				<h4 translate="budget.SIDEBOARD.CREATE.HEADER"></h4>
+			</div>
+		</div>
+		<div class="mod-body-wrapper">
+			<div class="mod-body">
+				<ul class="sidebar-nav">
+					<li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'account.create'}"
+						ng-click="vm.navigate('account.create')">
+						<span translate="budget.SIDEBOARD.CREATE.ACCOUNT"></span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
 </div>

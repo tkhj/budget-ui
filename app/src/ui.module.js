@@ -36,6 +36,20 @@ angular.module('budget.ui', [
                     controllerAs: 'vm',
                     stateLabel: 'budget.TITLE'
                 })
+				.state('account', {
+					url: '/account',
+					templateUrl: 'views/account/accountView.html',
+					controller: 'accountController',
+					controllerAs: 'vm',
+					stateLabel: 'budget.TITLE'
+				})
+				.state('account.create', {
+					url: '/create',
+					templateUrl: 'views/account/create/createAccountView.html',
+					controller: 'createAccountController',
+					controllerAs: 'vm',
+					stateLabel: 'budget.TITLE'
+				})
                 ;
 
 
@@ -70,9 +84,17 @@ angular.module('budget.ui', [
             UserService.checkLoggedIn().then(function(response) {
 
                 if(response.data.loggedin) {
+
+					// User is logged in, save their data
                     UserService.setUserData(response.data);
+
+
+
                 } else {
+
+					// User isn't logged in, set user data to false and send to home view
                     UserService.setUserData(false);
+					$state.go("home");
                 }
 
                 $rootScope.$broadcast('UserDataLoaded');

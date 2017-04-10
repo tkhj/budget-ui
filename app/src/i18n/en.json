@@ -16,7 +16,8 @@
                 "DASHBOARD": "Dashboard"
             },
             "CREATE": {
-                "HEADER": "Create"
+                "HEADER": "Create",
+				"ACCOUNT": "Add Account"
             }
         },
         "HOME": {
