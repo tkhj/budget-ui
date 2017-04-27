@@ -8,6 +8,7 @@
     border: 1px solid $brand-primary;
     color: $white;
     outline: none;
+	position: relative;
     transition: all .15s ease-in-out;
 
     &:hover {
@@ -19,6 +20,19 @@
         background: $teal-darken-20;
         color: $white;
     }
+
+	&.processing {
+
+		&:before {
+			background: $white;
+			bottom: 0;
+			content: '';
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
 }
 
 

@@ -1,4 +1,25 @@
-<div>
-	<p>create account view</p>
-	<p ng-click="vm.checkUserLogin()">check user login</p>
+<div class="create-account-module general-module">
+	<div class="mod-header-wrapper">
+		<div class="mod-header">
+			<h4 translate="budget.ACCOUNT.CREATE.HEADER"></h4>
+		</div>
+	</div>
+	<div class="mod-body-wrapper">
+		<div class="mod-body">
+			<form class="add-account-form" name="addAccountForm" novalidate>
+				<ul>
+					<li>
+						<input type="text" placeholder="{{'budget.ACCOUNT.CREATE.ACCT_NAME_PLACEHOLDER' | translate}}" name="acctNAme" ng-model="vm.accountData.acctName"
+							   required ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 2500, 'blur': 0 } }"
+							   ng-class="{'ng-invalid': vm.accountData.acctError}" ng-focus="vm.accountData.acctError=false" />
+						<div class="form-errors" ng-if="addAccountForm.acctName.$invalid && addAccountForm.acctName.$dirty">
+							<p class="error" ng-if="addAccountForm.acctName.$error.required && addAccountForm.acctName.$dirty" translate="budget.ACCOUNT.CREATE.ERROR_NAME_REQUIRED"></p>
+						</div>
+					</li>
+				</ul>
+			</form>
+			<br /><br />
+			<p ng-click="vm.checkUserLogin()">check user login</p>
+		</div>
+	</div>
 </div>

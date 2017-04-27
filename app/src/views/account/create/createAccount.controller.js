@@ -27,7 +27,10 @@ function createAccountController($rootScope, $scope, $log, $state, UserService) 
 
 
 	// Setup variables
-	//
+	vm.accountData = {
+		acctName: null,
+		acctError: false
+	};
 
 
 	/*

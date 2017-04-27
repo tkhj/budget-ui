@@ -100,9 +100,12 @@ angular.module('budget.ui', [
                 $rootScope.$broadcast('UserDataLoaded');
 
             },
-            function(/*errorResp*/) {
+            function error() {
 
+				// There was an error, unset user and send to dashboard
                 console.log('checkLoggIn error');
+				UserService.setUserData(false);
+				$state.go("home");
 
             });
 

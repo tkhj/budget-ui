@@ -27,9 +27,10 @@ function loginController($scope, $log, $state, UserService) {
 
     // Setup variables
     vm.loginData = {
-        'userEmail': null,
-        'userPassword': null,
-        'loginError': false
+        userEmail: null,
+        userPassword: null,
+        loginError: false,
+		processing: false
     };
 
 
@@ -39,7 +40,10 @@ function loginController($scope, $log, $state, UserService) {
     function login() {
         $log.debug('loginController::login');
 
-        UserService.loginUser(vm.loginData).then(function(response) {
+		vm.loginData.processing = true;
+
+		UserService.loginUser(vm.loginData).then(
+			function(response) {
 
                 if (response.data.loggedin) {
 
@@ -53,11 +57,15 @@ function loginController($scope, $log, $state, UserService) {
                     }
                 }
 
+				vm.loginData.processing = false;
+
             },
             function (errorResp) {
                 $log.debug('UserService errorResp:');
                 $log.debug(errorResp);
-            });
+				vm.loginData.processing = false;
+            }
+		);
     }
 
 }

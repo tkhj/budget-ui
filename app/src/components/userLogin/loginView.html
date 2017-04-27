@@ -21,8 +21,12 @@
                 </div>
             </li>
             <li>
-                <input type="button" class="button-submit" ng-class="{'button-disabled': loginForm.$invalid || vm.loginData.loginError}"
-                       ng-disabled="loginForm.$invalid || vm.loginData.loginError" ng-click="vm.login()" value="{{'budget.LOGIN_FORM.LOGIN' | translate}}" />
+                <input type="button"
+					   class="button-submit"
+					   ng-class="{'button-disabled': loginForm.$invalid || vm.loginData.loginError, 'processing': vm.loginData.processing}"
+                       ng-disabled="loginForm.$invalid || vm.loginData.loginError"
+					   ng-click="vm.login()"
+					   value="{{'budget.LOGIN_FORM.LOGIN' | translate}}" />
             </li>
         </ul>
         <div ng-if="vm.loginData.loginError" class="form-errors">

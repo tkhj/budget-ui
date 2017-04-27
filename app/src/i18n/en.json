@@ -42,6 +42,14 @@
         },
         "DASHBOARD": {
             "HEADER": "Dashboard"
-        }
+        },
+		"ACCOUNT": {
+			"CREATE": {
+				"HEADER": "Add new account",
+				"ACCT_NAME_PLACEHOLDER": "Account Name",
+				"ERROR_NAME_REQUIRED": "An account name is required.",
+				"ERROR_NAME_DUPLICATE": "An account with this name already exists."
+			}
+		}
     }
 }
