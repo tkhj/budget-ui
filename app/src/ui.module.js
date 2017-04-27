@@ -50,6 +50,13 @@ angular.module('budget.ui', [
 					controllerAs: 'vm',
 					stateLabel: 'budget.TITLE'
 				})
+				.state('account.view', {
+					url: '/view/:accountId',
+					templateUrl: 'views/account/view/viewAccountView.html',
+					controller: 'viewAccountController',
+					controllerAs: 'vm',
+					stateLabel: 'budget.TITLE'
+				})
                 ;
 
 

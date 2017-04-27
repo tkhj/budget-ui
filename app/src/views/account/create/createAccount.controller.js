@@ -8,46 +8,81 @@ angular
 
 
 createAccountController.$inject = [
-	'$rootScope',
 	'$scope',
 	'$log',
 	'$state',
-	'UserService'
+	'AccountService',
+	'UtilsService'
 ];
 
 
-function createAccountController($rootScope, $scope, $log, $state, UserService) {
+function createAccountController($scope, $log, $state, AccountService, UtilsService) {
 
 	var vm = this;
 	$log.debug("createAccountController");
 
 
 	// Setup functions
-	vm.checkUserLogin = checkUserLogin;
+	vm.checkAccountName = checkAccountName;
+	vm.createAccount = createAccount;
 
 
 	// Setup variables
 	vm.accountData = {
 		acctName: null,
-		acctError: false
+		acctNameError: false,
+		acctBalance: null,
+		acctBalanceError: false
 	};
 
 
+	/*********************************************************************
+	 * Scope Functions
+	 *********************************************************************/
+
 	/*
-	 * TODO: TEMPORARY NEEDS TO BE REMOVED
+	 * checkAccountName
 	 */
-	function checkUserLogin() {
-		$log.debug('dashboardController::checkUserLogin');
+	function checkAccountName() {
 
-		UserService.checkLoggedIn().then(function(response) {
+		$log.debug('createAccountController :: checkAccountName');
 
-				$log.debug('dashboard - check log in - response:');
-				$log.debug(response.data);
+		// Sanitize user input text
+		var acctName = UtilsService.sanitizeText(vm.accountData.acctName);
 
-			},
-			function (errorResp) {
-				$log.debug('UserService errorResp:');
-				$log.debug(errorResp);
-			});
+		if (acctName.length >= 3) {
+
+			// Send account name to API to check for duplicate
+			AccountService.checkAcctNameDuplicate(acctName).then(
+				function(response) {
+
+					$scope.addAccountForm.acctName.$setValidity("duplicate", !response.data.nameExists);
+				}
+			);
+		}
+	}
+
+
+	/*
+	 * createAccount
+	 */
+	function createAccount() {
+
+		$log.debug('createAccountController :: createAccount');
+
+		// Sanitize user input text
+		var acctName = UtilsService.sanitizeText(vm.accountData.acctName);
+		var acctBalance = UtilsService.sanitizeText(vm.accountData.acctBalance);
+
+		if (acctName.length >= 3 && acctBalance.length > 0) {
+
+			// Send account name to API to check for duplicate
+			AccountService.createNewAccount(acctName, acctBalance).then(
+				function(response) {
+
+					$state.go('account.view', {accountId: response.data.id});
+				}
+			);
+		}
 	}
 }

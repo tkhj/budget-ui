@@ -3,18 +3,30 @@
     <form class="login-form" name="loginForm" novalidate>
         <ul>
             <li>
-                <input type="email" placeholder="{{'budget.GENERAL.EMAIL' | translate}}" name="email" ng-model="vm.loginData.userEmail"
-                       required ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 2500, 'blur': 0 } }"
-                       ng-class="{'ng-invalid': vm.loginData.loginError}" ng-focus="vm.loginData.loginError=false" />
+				<label class="input-label" translate="budget.LOGIN_FORM.EMAIL_LABEL"></label>
+                <input type="email"
+					   placeholder="{{'budget.LOGIN_FORM.EMAIL_PLACEHOLDER' | translate}}"
+					   name="email"
+					   ng-model="vm.loginData.userEmail"
+                       required
+					   ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 2500, 'blur': 0 } }"
+                       ng-class="{'ng-invalid': vm.loginData.loginError}"
+					   ng-focus="vm.loginData.loginError = false" />
                 <div class="form-errors" ng-if="loginForm.email.$invalid && loginForm.email.$dirty">
                     <p class="error" ng-if="loginForm.email.$error.required && loginForm.email.$dirty" translate="budget.LOGIN_FORM.ERROR_EMAIL_REQUIRED"></p>
                     <p class="error" ng-if="loginForm.email.$error.email && loginForm.email.$dirty" translate="budget.LOGIN_FORM.ERROR_EMAIL_INVALID"></p>
                 </div>
             </li>
             <li>
-                <input type="password" placeholder="{{'budget.GENERAL.PASSWORD' | translate}}" name="password" ng-model="vm.loginData.userPassword"
-                       required ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 250, 'blur': 0 } }"
-                       ng-class="{'ng-invalid': vm.loginData.loginError}" ng-focus="vm.loginData.loginError=false"
+				<label class="input-label" translate="budget.LOGIN_FORM.PASSWORD_LABEL"></label>
+                <input type="password"
+					   placeholder="{{'budget.LOGIN_FORM.PASSWORD_PLACEHOLDER' | translate}}"
+					   name="password"
+					   ng-model="vm.loginData.userPassword"
+                       required
+					   ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 250, 'blur': 0 } }"
+                       ng-class="{'ng-invalid': vm.loginData.loginError}"
+					   ng-focus="vm.loginData.loginError = false"
                        ng-keyup="loginForm.$valid && $event.keyCode == 13 && vm.login()"/>
                 <div class="form-errors" ng-if="loginForm.password.$invalid && loginForm.password.$dirty">
                     <p class="error" ng-show="loginForm.password.$error.required && loginForm.password.$dirty" translate="budget.LOGIN_FORM.ERROR_PASSWORD_REQUIRED"></p>
@@ -26,7 +38,7 @@
 					   ng-class="{'button-disabled': loginForm.$invalid || vm.loginData.loginError, 'processing': vm.loginData.processing}"
                        ng-disabled="loginForm.$invalid || vm.loginData.loginError"
 					   ng-click="vm.login()"
-					   value="{{'budget.LOGIN_FORM.LOGIN' | translate}}" />
+					   value="{{'budget.LOGIN_FORM.LOGIN_BUTTON' | translate}}" />
             </li>
         </ul>
         <div ng-if="vm.loginData.loginError" class="form-errors">
