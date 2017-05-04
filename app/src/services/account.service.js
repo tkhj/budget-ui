@@ -15,7 +15,8 @@
 
 		var service = {
 			checkAcctNameDuplicate: checkAcctNameDuplicate,
-			createNewAccount: createNewAccount
+			createNewAccount: createNewAccount,
+			getAllAccounts: getAllAccounts
 		};
 
 		return service;
@@ -60,6 +61,24 @@
 				url: '/api.php/api/account/create',
 				method: 'POST',
 				data: data,
+				withCredentials: true,
+				headers: {
+					'Content-Type': 'application/json; charset=utf-8'
+				}
+			});
+		}
+
+
+		/*
+		 * getAllAccounts - gets all available user accounts
+		 */
+		function getAllAccounts() {
+
+			$log.debug("AccountService :: getAllAccounts()");
+
+			return $http({
+				url: '/api.php/api/account/getAccounts',
+				method: 'GET',
 				withCredentials: true,
 				headers: {
 					'Content-Type': 'application/json; charset=utf-8'

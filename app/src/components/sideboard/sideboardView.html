@@ -9,13 +9,27 @@
 		<div class="mod-body-wrapper">
 			<div class="mod-body">
 				<ul class="sidebar-nav">
-					<li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'home'}"
-						ng-if="!vm.userData.loggedin" ng-click="vm.navigate('home')">
+					<li class="sidebar-nav-item"
+						ng-class="{'selected': vm.stateDetails.name === 'home'}"
+						ng-if="!vm.userData.loggedin"
+						ng-click="vm.navigate('home')">
+
 						<span translate="budget.SIDEBOARD.VIEW.HOME"></span>
 					</li>
-					<li class="sidebar-nav-item" ng-class="{'selected': vm.stateDetails.name === 'dashboard'}"
-						ng-if="vm.userData.loggedin" ng-click="vm.navigate('dashboard')">
+					<li class="sidebar-nav-item"
+						ng-class="{'selected': vm.stateDetails.name === 'dashboard'}"
+						ng-if="vm.userData.loggedin"
+						ng-click="vm.navigate('dashboard')">
+
 						<span translate="budget.SIDEBOARD.VIEW.DASHBOARD"></span>
+					</li>
+					<li class="sidebar-nav-item"
+						ng-class="{'selected': vm.checkAccountActive(account.id)}"
+						ng-if="vm.userData.loggedin"
+						ng-click="vm.navigate('account.view', account.id)"
+						ng-repeat="account in vm.userAccounts">
+
+						<span>{{account.acct_name}}</span>
 					</li>
 				</ul>
 			</div>
