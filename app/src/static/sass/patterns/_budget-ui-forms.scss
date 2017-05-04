@@ -9,7 +9,7 @@ form {
         padding-bottom: budget-calc(10, 16, em);
 
         &:last-child {
-            padding: 0;
+            padding-bottom: 0;
         }
     }
 
@@ -22,10 +22,15 @@ form {
         font-size: budget-calc(12, 16, em);
         font-weight: bold;
     }
+
+	.form-action-container {
+		border-top: 1px solid $teal-darken-10;
+		padding-top: budget-calc(10, 16, em);
+	}
 }
 
 .input-label {
-    color: $teal-darken-10;
+    color: $white;
     display: block;
     font-size: budget-calc(12, 16, em);
     font-weight: bold;
@@ -33,9 +38,9 @@ form {
 }
 
 input[type="text"], input[type="password"], input[type="email"] {
-    background: $gray-80;
-    border: 1px solid $teal-darken-20;
-    color: $white;
+	background: $gray-80;
+    border: 1px solid $teal-darken-10;
+	color: $white;
     display: block;
     line-height: 1.25;
     padding: budget-calc(6, 16, em) budget-calc(10, 16, em);

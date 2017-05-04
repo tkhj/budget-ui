@@ -12,7 +12,8 @@ html {
 }
 
 body {
-    background: $gray-90;
+    background: $background-primary;
+	color: $gray-100;
     font-size: 1em; // Set application base font-size to 16px
     line-height: budget-calc(20, 16); // Set base line-height to 20px
 }

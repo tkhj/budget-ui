@@ -5,9 +5,9 @@
 *****************************************************************************/
 
 // Teal
-$teal: #00beda;
-$teal-darken-10: darken($teal, 10%);
-$teal-darken-20: darken($teal, 20%);
+$teal: #009fb6;
+$teal-darken-10: #0092a7;
+$teal-darken-20: #008396;
 
 
 // Black / Grays
@@ -33,13 +33,13 @@ $gray-100: #252525;
 
 // Generic Colors
 $white: #fff;
-$offwhite: #f1f1f1;
+$offwhite: #fafafa;
 
 
 
 // Brand Colors
 $brand-primary: $teal;
-$background-primary: #353535;
+$background-primary: $gray-90;
 $error: #e73333;
 
 

@@ -5,10 +5,10 @@
 *****************************************************************************/
 .sideboard {
     background: $gray-80;
+	border-right: 1px solid $gray-100;
     bottom: 0;
-    box-shadow: 0 0 20px rgba($black, .25);
     left: budget-calc(-($sideboard-padding-small + 10), 100, %);
-    padding-top: budget-calc(40, 16, em);
+    padding-top: budget-calc(36, 16, em);
     position: fixed;
     top: 0;
     transition: left .15s ease-in-out;
@@ -30,8 +30,8 @@
     *****************************************************************************/
     .mod-header {
         background: $teal-darken-20;
-        border-top: 1px solid $gray-90;
-        border-bottom: 1px solid $gray-90;
+        border-top: 1px solid $gray-100;
+        border-bottom: 1px solid $gray-100;
         padding-top: budget-calc(10, 16, em);
         padding-left: budget-calc(24, 16, em);
     }

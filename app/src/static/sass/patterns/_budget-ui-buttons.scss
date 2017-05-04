@@ -13,11 +13,13 @@
 
     &:hover {
         background: $teal-darken-10;
+		border: 1px solid $teal-darken-10;
         color: $white;
     }
 
     &:active {
         background: $teal-darken-20;
+		border: 1px solid $teal-darken-20;
         color: $white;
     }
 
@@ -37,18 +39,20 @@
 
 
 .button-disabled {
-    background: $gray-80;
-    border: 1px solid $gray-100;
+    background: $gray-70;
+    border: 1px solid $gray-70;
     color: $gray-90;
     cursor: default;
 
     &:hover {
-        background: $gray-80;
+        background: $gray-70;
+		border: 1px solid $gray-70;
         color: $gray-90;
     }
 
     &:active {
-        background: $gray-80;
+        background: $gray-70;
+		border: 1px solid $gray-70;
         color: $gray-90;
     }
 }

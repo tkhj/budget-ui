@@ -8,6 +8,7 @@ angular
         function () {
             return {
                 restrict: 'E',
+				replace: true,
                 scope: {},
                 templateUrl: 'components/userSignup/signupView.html',
                 controller: 'signupController',

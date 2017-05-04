@@ -4,9 +4,9 @@
 **
 *****************************************************************************/
 .top-nav-module {
-    background: $brand-primary;
-    border-bottom: 1px solid $teal-darken-10;
-    height: budget-calc(40, 16, em);
+    //background: $brand-primary;
+    background: $teal-darken-10;
+    height: budget-calc(36, 16, em);
     left: 0;
     position: fixed;
     right: 0;
@@ -14,21 +14,19 @@
     z-index: 1000;
 
     .side-nav-toggle {
-        color: $teal-darken-20;
+        color: $white;
         cursor: pointer;
         display: inline-block;
-        padding: budget-calc(10, 16, em);
+        padding: budget-calc(8, 16, em) budget-calc(10, 16, em);
         transition: all .15s ease-in-out;
         vertical-align: top;
 
         &.active {
             background: $teal-darken-20;
-            color: $white;
         }
 
         &:hover {
-            background: $teal-darken-10;
-            color: $white;
+			background: $brand-primary;
         }
     }
 
@@ -55,15 +53,8 @@
             vertical-align: middle;
         }
 
-
-        &:active {
-            background: $teal-darken-20;
-            color: $white;
-        }
-
         &:hover {
-            background: $teal-darken-10;
-            color: $white;
+			background: $brand-primary;
         }
     }
 }

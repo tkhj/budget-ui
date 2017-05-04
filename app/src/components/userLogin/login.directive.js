@@ -8,6 +8,7 @@ angular
         function () {
             return {
                 restrict: 'E',
+				replace: true,
                 scope: {},
                 templateUrl: 'components/userLogin/loginView.html',
                 controller: 'loginController',
