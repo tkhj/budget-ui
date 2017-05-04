@@ -16,8 +16,9 @@
         color: $white;
         cursor: pointer;
         display: inline-block;
-		margin-left: budget-calc(10, 16, em);
-        padding: budget-calc(8, 16, em) budget-calc(10, 16, em) ;
+		font-size: budget-calc(14, 16, em);
+		margin-left: budget-calc(10, 14, em);
+        padding: budget-calc(10, 14, em) budget-calc(10, 14, em) budget-calc(9, 14, em);
         transition: all .15s ease-in-out;
         vertical-align: top;
 
@@ -33,6 +34,7 @@
     .page-title {
         cursor: pointer;
         display: inline-block;
+		font-size: budget-calc(14, 16, em);
         height: 100%;
         padding: 0 budget-calc(10, 16, em);
         transition: all .15s ease-in-out;
@@ -67,8 +69,9 @@
 	.user-nav-toggle {
 		color: $white;
 		cursor: pointer;
-		margin-right: budget-calc(10, 16, em);
-		padding: budget-calc(8, 16, em) budget-calc(10, 16, em);
+		font-size: budget-calc(14, 16, em);
+		margin-right: budget-calc(10, 14, em);
+		padding: budget-calc(10, 14, em) budget-calc(10, 14, em) budget-calc(9, 14, em);
 
 		&.active {
 			background: $teal-darken-20;

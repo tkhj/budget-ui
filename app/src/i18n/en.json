@@ -10,6 +10,10 @@
             "HEADER": "OurIncome",
 			"LOGIN": "LOGIN"
         },
+		"USER_NAV_TOOLTIP": {
+			"HEADER": "Options",
+			"LOGOUT": "Logout"
+		},
         "SIDEBOARD": {
             "VIEW": {
                 "HEADER": "View",
