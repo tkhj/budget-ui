@@ -9,14 +9,13 @@ angular
 
 homeViewController.$inject = [
     '$rootScope',
-    '$scope',
     '$log',
     '$state',
     'UserService'
 ];
 
 
-function homeViewController($rootScope, $scope, $log, $state, UserService) {
+function homeViewController($rootScope, $log, $state, UserService) {
 
     var vm = this;
     $log.debug("homeViewController");

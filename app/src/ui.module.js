@@ -29,6 +29,16 @@ angular.module('budget.ui', [
                     controllerAs: 'vm',
                     stateLabel: 'budget.TITLE'
                 })
+				.state('login', {
+					url: '/login',
+					templateUrl: 'views/login/loginView.html',
+					stateLabel: 'budget.TITLE'
+				})
+				.state('signup', {
+					url: '/signup',
+					templateUrl: 'views/signup/signupView.html',
+					stateLabel: 'budget.TITLE'
+				})
                 .state('dashboard', {
                     url: '/dashboard',
                     templateUrl: 'views/dashboard/dashboardView.html',
@@ -95,13 +105,14 @@ angular.module('budget.ui', [
 					// User is logged in, save their data
                     UserService.setUserData(response.data);
 
-
-
                 } else {
 
 					// User isn't logged in, set user data to false and send to home view
-                    UserService.setUserData(false);
+					UserService.setUserData(false);
+
+					// Need a way to determine where the user was trying to go... let them go directly to login and signup states...
 					$state.go("home");
+
                 }
 
                 $rootScope.$broadcast('UserDataLoaded');

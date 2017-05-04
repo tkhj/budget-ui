@@ -1,0 +1,23 @@
+/*****************************************************************************
+**
+**		Tooltip Login
+**
+*****************************************************************************/
+.login-tooltip {
+	position: absolute;
+	right: budget-calc(10, 16, em);
+	top: 100%;
+
+	.login-module {
+		width: budget-calc(300, 16, em);
+	}
+
+	.mod-header {
+		border-top: 1px solid $teal-darken-20;
+		border-radius: 0;
+	}
+
+	.mod-body {
+		border-radius: 0;
+	}
+}

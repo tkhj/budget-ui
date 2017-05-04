@@ -17,6 +17,20 @@
 						<span translate="budget.SIDEBOARD.VIEW.HOME"></span>
 					</li>
 					<li class="sidebar-nav-item"
+						ng-class="{'selected': vm.stateDetails.name === 'login'}"
+						ng-if="!vm.userData.loggedin"
+						ng-click="vm.navigate('login')">
+
+						<span translate="budget.SIDEBOARD.VIEW.LOGIN"></span>
+					</li>
+					<li class="sidebar-nav-item"
+						ng-class="{'selected': vm.stateDetails.name === 'signup'}"
+						ng-if="!vm.userData.loggedin"
+						ng-click="vm.navigate('signup')">
+
+						<span translate="budget.SIDEBOARD.VIEW.SIGNUP"></span>
+					</li>
+					<li class="sidebar-nav-item"
 						ng-class="{'selected': vm.stateDetails.name === 'dashboard'}"
 						ng-if="vm.userData.loggedin"
 						ng-click="vm.navigate('dashboard')">

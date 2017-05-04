@@ -24,12 +24,18 @@ function topNavController($rootScope, $log, $state, UserService) {
     // Setup functions
     vm.navigate = navigate;
     vm.toggleSideboard = toggleSideboard;
+	vm.toggleUserNav = toggleUserNav;
 
 
     // Setup variables
     vm.userData = null;
     vm.isToggleOpen = false;
+	vm.isUserNavOpen = false;
 
+
+	/*******************************************************************
+	 * Public Functions
+	 *******************************************************************/
 
     /*
      * navigate - sends the user to homepage or dashboard depending on logged in status
@@ -56,11 +62,56 @@ function topNavController($rootScope, $log, $state, UserService) {
     }
 
 
+	/*
+	 * toggleUserNav - toggle the top user nav open / closed
+	 */
+	function toggleUserNav() {
+
+		vm.isUserNavOpen = !vm.isUserNavOpen;
+	}
+
+
+	/*******************************************************************
+	 * Private Functions
+	 *******************************************************************/
+
+	/*
+	 * UserDataLoaded - initial run user data has been returned
+	 * this helps users if they are already logged in on first page load
+	 */
+	function checkUserData() {
+
+		vm.userData = UserService.getUserData();
+	}
+
+
+	/*******************************************************************
+	 * Listeners
+	 *******************************************************************/
+
     /*
      * listen for sideboardToggle - it can be sent from other views
      */
     $rootScope.$on('sideboardToggle', function() {
         vm.isToggleOpen = !vm.isToggleOpen;
     });
+
+
+	/*
+	 * Update the state when it changes
+	 */
+	$rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+
+		// Closer user nav on state changes
+		vm.isUserNavOpen = false;
+
+		// Get updated user data on state changes
+		vm.userData = UserService.getUserData();
+	});
+
+
+	$rootScope.$on('UserDataLoaded', function() {
+		checkUserData();
+	});
 
 }

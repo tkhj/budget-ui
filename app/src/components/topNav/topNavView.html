@@ -5,4 +5,20 @@
     <div class="page-title"  ng-click="vm.navigate()">
         <span translate="budget.TOP_NAV.HEADER"></span>
     </div>
+	<div class="user-nav-container">
+		<div class="user-nav-toggle" ng-click="vm.toggleUserNav()" ng-class="{'active': vm.isUserNavOpen}">
+			<div ng-if="!vm.userData.loggedin">
+				<span class="toggle" translate="budget.TOP_NAV.LOGIN"></span>
+			</div>
+			<div ng-if="vm.userData.loggedin">
+				<span class="toggle">{{vm.userData.name}}</span>
+			</div>
+		</div>
+		<div class="login-tooltip" ng-if="vm.isUserNavOpen && !vm.userData.loggedin">
+			<budget-login-form></budget-login-form>
+		</div>
+		<div class="user-nav-tooltip" ng-if="vm.isUserNavOpen && vm.userData.loggedin">
+			<budget-user-nav></budget-user-nav>
+		</div>
+	</div>
 </header>

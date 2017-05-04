@@ -23,7 +23,6 @@ function dashboardController($rootScope, $scope, $log, $state, UserService) {
 
 
     // Setup functions
-    vm.logout = logout;
     vm.checkUserLogin = checkUserLogin;
     vm.checkUserData = checkUserData;
 
@@ -36,27 +35,6 @@ function dashboardController($rootScope, $scope, $log, $state, UserService) {
      * Get any user data
      */
     checkUserData();
-
-
-    /*
-     * logout
-     */
-    function logout() {
-        $log.debug('dashboardController::logout');
-
-        UserService.logoutUser().then(function(response) {
-
-				// update user data ( should be {"loggedin": false} )
-                UserService.setUserData(response.data);
-
-                $state.go('home');
-
-            },
-            function (errorResp) {
-                $log.debug('UserService errorResp:');
-                $log.debug(errorResp);
-            });
-    }
 
 
     /*

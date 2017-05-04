@@ -7,13 +7,16 @@
             "PASSWORD": "Password"
         },
         "TOP_NAV": {
-            "HEADER": "OurIncome"
+            "HEADER": "OurIncome",
+			"LOGIN": "LOGIN"
         },
         "SIDEBOARD": {
             "VIEW": {
                 "HEADER": "View",
                 "HOME": "Home",
-                "DASHBOARD": "Dashboard"
+                "DASHBOARD": "Dashboard",
+				"LOGIN": "Login",
+				"SIGNUP": "Signup"
             },
             "CREATE": {
                 "HEADER": "Create",

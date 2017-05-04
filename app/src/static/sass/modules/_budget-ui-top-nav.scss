@@ -4,7 +4,6 @@
 **
 *****************************************************************************/
 .top-nav-module {
-    //background: $brand-primary;
     background: $teal-darken-10;
     height: budget-calc(36, 16, em);
     left: 0;
@@ -17,7 +16,8 @@
         color: $white;
         cursor: pointer;
         display: inline-block;
-        padding: budget-calc(8, 16, em) budget-calc(10, 16, em);
+		margin-left: budget-calc(10, 16, em);
+        padding: budget-calc(8, 16, em) budget-calc(10, 16, em) ;
         transition: all .15s ease-in-out;
         vertical-align: top;
 
@@ -57,4 +57,25 @@
 			background: $brand-primary;
         }
     }
+
+	.user-nav-container {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.user-nav-toggle {
+		color: $white;
+		cursor: pointer;
+		margin-right: budget-calc(10, 16, em);
+		padding: budget-calc(8, 16, em) budget-calc(10, 16, em);
+
+		&.active {
+			background: $teal-darken-20;
+		}
+
+		&:hover {
+			background: $brand-primary;
+		}
+	}
 }
